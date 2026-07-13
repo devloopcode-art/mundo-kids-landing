@@ -1,15 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
-const basePath = isProd ? '/crypto-nextjs' : ''
-
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: basePath,
-  assetPrefix: basePath,
-  images: {
-    unoptimized: true
-  }
+  // Mantemos limpo para o Next.js gerenciar o build sozinho sem dar avisos de chaves inválidas
 };
 
 export default nextConfig;

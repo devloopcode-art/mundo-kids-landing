@@ -14,9 +14,9 @@ const Logo: React.FC = () => {
       >
         <defs>
           <linearGradient id="kidsLogoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#FF007A" />
-            <stop offset="60%" stop-color="#E0118F" />
-            <stop offset="100%" stop-color="#00E5FF" />
+            <stop offset="0%" stopColor="#FF007A" />
+            <stop offset="60%" stopColor="#E0118F" />
+            <stop offset="100%" stopColor="#00E5FF" />
           </linearGradient>
         </defs>
         
@@ -28,15 +28,15 @@ const Logo: React.FC = () => {
             transform="translate(0, 4) scale(1.6)" 
           />
           
-          {/* Aumentamos o tamanho da fonte (font-size) de 24 para 32 */}
+          {/* Aumentamos o tamanho da fonte (fontSize) de 24 para 32 */}
           <text 
             x="46" 
             y="30" 
-            font-family="system-ui, -apple-system, sans-serif" 
-            font-weight="900" 
-            font-size="32" 
+            fontFamily="system-ui, -apple-system, sans-serif" 
+            fontWeight="900" 
+            fontSize="32" 
             fill="#FFFFFF" 
-            letter-spacing="1"
+            letterSpacing="1"
           >
             MUNDO
           </text>
@@ -45,11 +45,11 @@ const Logo: React.FC = () => {
           <text 
             x="178" 
             y="30" 
-            font-family="system-ui, -apple-system, sans-serif" 
-            font-weight="900" 
-            font-size="32" 
+            fontFamily="system-ui, -apple-system, sans-serif" 
+            fontWeight="900" 
+            fontSize="32" 
             fill="url(#kidsLogoGrad)" 
-            letter-spacing="1"
+            letterSpacing="1"
           >
             KIDS
           </text>
@@ -58,11 +58,11 @@ const Logo: React.FC = () => {
           <text 
             x="48" 
             y="48" 
-            font-family="system-ui, -apple-system, sans-serif" 
-            font-weight="700" 
-            font-size="10.5" 
+            fontFamily="system-ui, -apple-system, sans-serif" 
+            fontWeight="700" 
+            fontSize="10.5" 
             fill="#B3B3B3" 
-            letter-spacing="3"
+            letterSpacing="3"
           >
             FASHION EXPERIENCE
           </text>
