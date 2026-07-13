@@ -10,8 +10,7 @@ import Faq from "./components/home/faq";
 import ContactForm from "./components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "MUndo Kids",
-  description: "Mundo Kids - O mundo das crianças",
+  title: "Crypto",
 };
 
 export default function Home() {
