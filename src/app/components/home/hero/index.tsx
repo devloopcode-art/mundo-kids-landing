@@ -1,5 +1,4 @@
 "use client";
-import { getImagePath } from "@/lib/utils/imagePath";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import { useState } from "react";
@@ -52,7 +51,7 @@ const Banner = () => {
                     Quero Participar
                   </button>
                   
-                  {/* Botão do Instagram mudado do "How it works" */}
+                  {/* Botão do Instagram */}
                   <a
                     href="https://instagram.com/kids_fashion_experience"
                     target="_blank"
@@ -65,10 +64,10 @@ const Banner = () => {
                 </div>
               </div>
               
-              {/* Mantive a estrutura da foto da direita, onde você vai poder colocar a foto das crianças depois */}
+              {/* Imagem do banner corrigida com caminho direto para o build em produção */}
               <div className="lg:col-span-5 lg:-m-48 -m-20 overflow-hidden">
                 <Image
-                  src={getImagePath("/images/banner/banner.png")}
+                  src="/images/banner/banner.png"
                   alt="Mundo Kids Fashion"
                   width={1013}
                   height={760}
