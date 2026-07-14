@@ -1,5 +1,4 @@
 "use client";
-import { getImagePath } from "@/lib/utils/imagePath";
 import Image from "next/image";
 
 const Table = () => {
@@ -110,13 +109,14 @@ const Table = () => {
         </div>
       </div>
       
-      {/* Detalhe visual de rodapé que já veio com o seu template */}
+      {/* Detalhe visual de rodapé corrigido para carregar na Vercel */}
       <Image
-        src={getImagePath("/images/table/Untitled.svg")}
+        src="/images/table/Untitled.svg"
         alt="ellipse"
         width={2460}
         height={102}
         className="w-full opacity-40 mt-6"
+        priority
       />
     </section>
   );
