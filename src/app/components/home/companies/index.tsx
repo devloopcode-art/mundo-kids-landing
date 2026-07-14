@@ -39,18 +39,27 @@ const Companies = () => {
     ],
   };
 
-  // Função para limpar o caminho de qualquer prefixo antigo ou pasta duplicada automaticamente
+  // Função robusta para limpar o caminho
   const resolveSrc = (src: string) => {
     if (!src) return "";
-    // Remove o prefixo do repositório antigo ou a palavra "public" se o NextJS tentar duplicar
-    return src
+    
+    // Remove qualquer prefixo legado
+    let clean = src
       .replace("/crypto-nextjs-1.0.0", "")
       .replace("crypto-nextjs-1.0.0", "")
-      .replace("/public", "");
+      .replace("/public", "")
+      .replace("public/", "");
+
+    // Garante que o caminho comece com uma barra para o Next.js mapear para a pasta public
+    if (!clean.startsWith("/")) {
+      clean = "/" + clean;
+    }
+    
+    return clean;
   };
 
   return (
-    // Mudamos o fundo para um preto premium para dar contraste total com as letras e logos
+    // Fundo preto premium para contraste total
     <section className="border-t border-b border-white/5 py-12 bg-[#09070f]">
       <div className="container mx-auto px-4">
         
@@ -65,18 +74,20 @@ const Companies = () => {
           <div className="h-[2px] w-16 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-3"></div>
         </div>
 
-        {/* Forçamos as logos a ficarem mais claras no fundo escuro */}
-        <div className="opacity-80 hover:opacity-100 transition-opacity duration-300">
+        {/* Slider de Marcas */}
+        <div className="opacity-90 hover:opacity-100 transition-opacity duration-300">
           <Slider {...settings}>
             {Companiesdata?.map((item: any, i: any) => (
               <div key={i} className="outline-none px-4">
-                <div className="flex items-center justify-center h-16 brightness-200 contrast-75 hover:brightness-100 hover:contrast-100 transition-all duration-300">
+                {/* Removidos filtros excessivos (brightness/contrast/invert) que podem ocultar imagens coloridas ou já otimizadas */}
+                <div className="flex items-center justify-center h-16 transition-all duration-300">
                   <Image
                     src={resolveSrc(item.imgSrc)}
                     alt="Loja Participante"
                     width={203}
                     height={101}
-                    className="w-auto max-h-10 object-contain mx-auto invert opacity-80"
+                    className="w-auto max-h-12 object-contain mx-auto"
+                    priority={i < 5} // Melhora o carregamento das primeiras marcas expostas
                   />
                 </div>
               </div>
