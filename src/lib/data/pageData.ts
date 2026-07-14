@@ -5,16 +5,17 @@ import { HeaderItem } from "@/app/types/menu";
 import { SocialType } from "@/app/types/sociallink";
 import { WorkType } from "@/app/types/work";
 
+// Menu de navegação adaptado para o Mundo Kids
 export const Headerdata: HeaderItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Exchange", href: "/#exchange-section" },
-  { label: "Features", href: "/#features-section" },
-  { label: "FAQ", href: "/#faq-section" },
-  { label: "Contact Us", href: "/#contact" },
-  { label: "Docs", href: "/documentation" },
+  { label: "Início", href: "/" },
+  { label: "Pilares", href: "/#features-section" },
+  { label: "Como Funciona", href: "/#work-section" },
+  { label: "Dúvidas", href: "/#faq-section" },
+  { label: "Contato", href: "/#contact" },
 ];
 
-const basePath = process.env.NODE_ENV === "production" ? "/crypto-nextjs" : "";
+// Corrigido: Em produção no domínio próprio da Vercel, o caminho deve iniciar direto da raiz "/"
+const basePath = "";
 
 export const Companiesdata: { imgSrc: string }[] = [
   {
@@ -37,63 +38,66 @@ export const Companiesdata: { imgSrc: string }[] = [
   },
 ];
 
+// Passos adaptados e traduzidos para o Mundo Kids Fashion Experience
 export const workdata: WorkType[] = [
   {
     imgSrc: `${basePath}/images/work/icon-one.svg`,
-    heading: "Create Account",
+    heading: "Inscrição Online",
     subheading:
-      "Sign up with your email, set up a secure password, and verify your identity to unlock full access to the platform. Getting started takes just a few minutes.",
+      "Preencha o formulário de cadastro com os dados do pequeno talento. É rápido, seguro e o primeiro passo para essa grande jornada.",
   },
   {
     imgSrc: `${basePath}/images/work/icon-two.svg`,
-    heading: "Add Funds",
+    heading: "Preparação & Workshop",
     subheading:
-      "Deposit money using your preferred payment method — bank transfer, debit card, or crypto wallet — and get ready to explore the world of digital assets.",
+      "Nossa equipe de profissionais dará todo o suporte, dicas de postura, passarela e desinibição para as crianças brilharem com naturalidade.",
   },
   {
     imgSrc: `${basePath}/images/work/icon-three.svg`,
-    heading: "Buy, Sell & Exchange",
+    heading: "O Grande Desfile",
     subheading:
-      "Easily buy or sell cryptocurrencies like Bitcoin and Ethereum, or convert between coins — all with real-time rates and low transaction fees.",
+      "O momento de brilhar na passarela! Uma estrutura incrível com marcas parceiras, fotos profissionais e muita diversão para a família.",
   },
 ];
 
+// Pilares adaptados para o Mundo Kids
 export const Featuresdata: FeatureType[] = [
   {
     imgSrc: `${basePath}/images/features/featureOne.svg`,
-    heading: "Secure Storage",
+    heading: "Ambiente Seguro",
     subheading:
-      "Your crypto is protected with advanced encryption and offline cold wallets, ensuring top-tier security and privacy.",
+      "Toda a nossa estrutura e equipe são preparadas para acolher as crianças e as famílias com total segurança e respeito.",
   },
   {
     imgSrc: `${basePath}/images/features/featureTwo.svg`,
-    heading: "Free to Use",
+    heading: "Participação Gratuita",
     subheading:
-      "Enjoy powerful portfolio tracking, live analytics, and account management tools — all without any hidden fees.",
+      "A inscrição e a participação no workshop inicial do projeto são totalmente gratuitas para os novos talentos selecionados.",
   },
   {
     imgSrc: `${basePath}/images/features/featureThree.svg`,
-    heading: "Real-Time Price Data",
+    heading: "Mídia & Divulgação",
     subheading:
-      "Get live crypto prices, market updates, and real-time data from top global exchanges — all in one place, 24/7.",
+      "Tenha fotos e vídeos profissionais do desfile do seu filho para guardar de lembrança ou iniciar um portfólio de sucesso.",
   },
 ];
 
+// Dúvidas Frequentes (FAQ) adaptadas para o Mundo Kids
 export const Faqdata: FaqType[] = [
   {
-    heading: "1. What is cryptocurrency?",
+    heading: "1. Como meu filho pode participar?",
     subheading:
-      "Cryptocurrency is a digital or virtual currency secured by cryptography, making it nearly impossible to counterfeit or double-spend. It operates on decentralized networks called blockchains, allowing peer-to-peer transactions without intermediaries.",
+      "Basta preencher o formulário de inscrição em nossa página com as informações de contato do responsável e os dados básicos da criança. Nossa equipe entrará em contato para agendar as próximas etapas.",
   },
   {
-    heading: "2. Can cryptocurrency be converted to cash?",
+    heading: "2. Crianças sem experiência podem participar?",
     subheading:
-      "Yes, cryptocurrencies can be converted to cash through exchanges, peer-to-peer platforms, or crypto ATMs. Many platforms allow you to sell your crypto and withdraw funds directly to your bank account.",
+      "Com certeza! O Mundo Kids foi feito justamente para revelar novos talentos. Oferecemos preparação básica para que todas as crianças se sintam seguras, confiantes e se divirtam na passarela.",
   },
   {
-    heading: "3. How long should you hold cryptocurrency?",
+    heading: "3. O evento é seguro para as famílias?",
     subheading:
-      "The holding period depends on your investment goals. Some traders prefer short-term trading to capitalize on price volatility, while others hold long-term, believing in the asset's future value growth. Always assess your risk tolerance before deciding.",
+      "Sim, segurança é a nossa prioridade número um. O evento ocorre em ambientes controlados, com acesso monitorado, equipe de apoio dedicada e total acompanhamento dos pais ou responsáveis em todas as fases.",
   },
 ];
 
@@ -117,9 +121,9 @@ export const Sociallinkdata: SocialType[] = [
 ];
 
 export const Footerlinkdata: FooterType[] = [
-  { label: "Home", href: "/" },
-  { label: "Exchange", href: "/#exchange-section" },
-  { label: "Features", href: "/#features-section" },
-  { label: "FAQ", href: "/#faq-section" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Início", href: "/" },
+  { label: "Pilares", href: "/#features-section" },
+  { label: "Como Funciona", href: "/#work-section" },
+  { label: "Dúvidas", href: "/#faq-section" },
+  { label: "Contato", href: "/#contact" },
 ];
