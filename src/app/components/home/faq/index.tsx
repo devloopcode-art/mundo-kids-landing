@@ -1,5 +1,4 @@
 "use client";
-import { getImagePath } from "@/lib/utils/imagePath";
 import {
   Disclosure,
   DisclosureButton,
@@ -83,15 +82,16 @@ const Faq = () => {
               </div>
             </div>
 
-            {/* Coluna da Imagem Lateral (Ocupa 5 colunas na direita) */}
+            {/* Coluna da Imagem Lateral (Ocupa 5 colunas na direita com caminho corrigido) */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-10 lg:mt-0">
               <div className="relative w-full max-w-[400px] aspect-square opacity-40 lg:opacity-80">
                 <Image
-                  src={getImagePath("/images/faq/faq.svg")}
+                  src="/images/faq/faq.svg"
                   alt="Mundo Kids FAQ"
                   width={400}
                   height={400}
                   className="w-full h-auto"
+                  priority
                 />
               </div>
             </div>
