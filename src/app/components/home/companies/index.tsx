@@ -39,6 +39,16 @@ const Companies = () => {
     ],
   };
 
+  // Função para limpar o caminho de qualquer prefixo antigo ou pasta duplicada automaticamente
+  const resolveSrc = (src: string) => {
+    if (!src) return "";
+    // Remove o prefixo do repositório antigo ou a palavra "public" se o NextJS tentar duplicar
+    return src
+      .replace("/crypto-nextjs-1.0.0", "")
+      .replace("crypto-nextjs-1.0.0", "")
+      .replace("/public", "");
+  };
+
   return (
     // Mudamos o fundo para um preto premium para dar contraste total com as letras e logos
     <section className="border-t border-b border-white/5 py-12 bg-[#09070f]">
@@ -62,7 +72,7 @@ const Companies = () => {
               <div key={i} className="outline-none px-4">
                 <div className="flex items-center justify-center h-16 brightness-200 contrast-75 hover:brightness-100 hover:contrast-100 transition-all duration-300">
                   <Image
-                    src={item.imgSrc}
+                    src={resolveSrc(item.imgSrc)}
                     alt="Loja Participante"
                     width={203}
                     height={101}
